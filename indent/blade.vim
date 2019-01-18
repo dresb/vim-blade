@@ -40,6 +40,8 @@ function! s:IsStartingDelimiter(lnum)
                 \ || line =~# '{{\%(.*}}\)\@!'
                 \ || line =~# '{!!\%(.*!!}\)\@!'
                 \ || line =~# '<?\%(.*?>\)\@!'
+                \ || line =~# '<script.*>'
+                \ || line =~# '<style.*>'
 endfunction
 
 function! GetBladeIndent()
